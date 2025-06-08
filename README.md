@@ -20,8 +20,6 @@
 ## If you don't have access to the folder Android/data/, use the setting in Hooks!
 ```bash
   - "/storage/emulated/0/Android/data/com.rockstargames.gtavc/files/"
-  or
-  - "/storage/emulated/0/VCMP/"
 ```
 
 # ScreenShots
