@@ -22,7 +22,5 @@
 </p>
 <p align="center">First day of Developing</p>
 
-<p align="center">
   ![image](https://github.com/user-attachments/assets/402526fc-13f9-4b88-b070-3bcdf02f995c)
-</p>
 <p align="center">Screenshot from arm64</p>
