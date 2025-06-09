@@ -21,3 +21,8 @@
   <img src="https://i.imgur.com/9e4SqWf.jpg" width="500" title="First Day">
 </p>
 <p align="center">First day of Developing</p>
+
+<p align="center">
+  <img src="[https://i.imgur.com/9e4SqWf.jpg](https://github.com/user-attachments/assets/9cb2d86e-9f3c-41b3-a646-4766c4524c9f)" width="500" title="ARM64">
+</p>
+<p align="center">Screenshot from arm64</p>
