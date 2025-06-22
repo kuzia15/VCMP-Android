@@ -19,25 +19,6 @@ JNIEnv *mEnv;
 #endif
 CGame *pGame = 0;
 
-void *Init(void *p)
-{
-    pGame = new CGame();
-
-    while (true)
-    {
-        if (*(uintptr_t*)(g_libGTAVC+ADDR_GAMESTATE) == 9)
-        {
-            LOGI("libGTAVC.so: Game start sended!");
-            pGame->InitGame();
-            break;
-        } else {
-            usleep(5000);
-        }
-    }
-
-    pthread_exit(0);
-}
-
 void (*TouchEvent)(int, int, int posX, int posY);
 
 void TouchEvent_hook(int type, int num, int posX, int posY) {
@@ -64,6 +45,7 @@ extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved)
 	{
         WNGTA();
         CHooks::InitHooksKuzia();
+	pGame->InitGame();
 	}
     else
     {
@@ -72,9 +54,6 @@ extern "C" JNIEXPORT jint JNI_OnLoad(JavaVM* vm, void* reserved)
     }
 
     g_pStorage = "/storage/emulated/0/Android/data/com.rockstargames.gtavc/files/";
-
-    pthread_t thread;
-    pthread_create(&thread, 0, Init, 0);
 
 	return JNI_VERSION_1_6;
 }
